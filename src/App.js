@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 
 function App() {
   const [time, setTime] = useState(900); // 25 minutos en segundos
   const [isRunning, setIsRunning] = useState(false);
+  const [backgroundImage, setBackgroundImage] = useState('/cute-center-image.png');
 
   const startTimer = () => setIsRunning(true);
   const stopTimer = () => setIsRunning(false);
@@ -18,7 +19,7 @@ function App() {
     return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     let interval;
     if (isRunning) {
       interval = setInterval(() => {
@@ -30,6 +31,16 @@ function App() {
     return () => clearInterval(interval);
   }, [isRunning]);
 
+  useEffect(() => {
+    const imageInterval = setInterval(() => {
+      setBackgroundImage((prev) =>
+        prev === '/cute-center-image.png' ? '/cute-center-image2.png' : '/cute-center-image.png'
+      );
+    }, 2000);
+
+    return () => clearInterval(imageInterval);
+  }, []);
+
   return (
     <div className="browser-window">
       <div className="browser-header">
@@ -39,7 +50,7 @@ function App() {
           <span className="maximize-btn"></span>
         </div>
       </div>
-    <div className="app" style={{ backgroundImage: 'url(/cute-center-image.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
+    <div className="app" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '30vh' }}>
       <h1 className={isRunning ? 'spinning-flower' : '' } style={{ fontSize: '2.5rem', fontWeight: 'bolder' }}>
         <div className="title-container">
           <span>Rice Timer ⏳</span>

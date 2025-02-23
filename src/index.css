@@ -1,5 +1,5 @@
 body {
-  background-color: #f5e5fa;
+  background-color: #fcf7e9;
   font-family: 'Silkscreen', cursive;
   display: flex;
   justify-content: center;
@@ -10,8 +10,8 @@ body {
 }
 
 .app {
-  background: #74358d;
-  border: 3px dashed #fc53f3;
+  background: #465229;
+  border: 3px solid #829c45;
   padding: 10px;
   border-radius: 00px;
   text-align: center;
@@ -30,13 +30,13 @@ h1 {
 }
 
 .buttons button {
-  background: #f8b7e5;
-  border: 3px dotted #fc53f3;
-  padding: 10px 30px;
-  margin: 5px;
+  background: #ffffff;
+  border: 3px solid #9cb459;
+  padding: 10px 10px;
+  margin: 3px;
 
   border-radius: 00px;
-  color: white;
+  color: rgb(7, 7, 7);
   font-size: 1rem;
   font-family: 'Silkscreen', cursive;
   cursor: pointer;
@@ -44,7 +44,7 @@ h1 {
 }
 
 .buttons button:hover {
-  background: #ff85a2;
+  background: #95b86e;
   transform: scale(1.05);
 }
 
@@ -66,8 +66,8 @@ h1 {
   animation: spin 2s linear infinite;
 }
 .timer-container {
-  background-color: #ffe6f2;
-  border: 3px dashed #ff85a2;
+  background-color: #eaf8d3;
+  border: 3px dashed #81b143;
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -87,15 +87,15 @@ h1 {
 .browser-window {
   width: 100%;
   max-width: 800px;
-  background: #74358d;
-  border: 3px solid #fc53f3;
+  background: #e1f5c7;
+  border: 3px solid #7eaf51;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 5px 5px 15px #ffb3c6;
+  box-shadow: 5px 5px 15px #d9f19f;
 }
 
 .browser-header {
-  background: #ffb3c6;
+  background: #95c06c;
   padding: 5px;
   display: flex;
   align-items: center;
@@ -117,11 +117,11 @@ h1 {
 }
 
 .close-btn {
-  background: #eb56ff;
+  background: #dbf7a8;
 }
 
 .minimize-btn {
-  background: #f7f0f6;
+  background: #f3f7f0;
 }
 
 .maximize-btn {
