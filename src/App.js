@@ -42,15 +42,29 @@ function App() {
   }, []);
 
   return (
-    <div className="browser-window">
-      <div className="browser-header">
-        <div className="browser-buttons">
-          <span className="close-btn"></span>
-          <span className="minimize-btn"></span>
-          <span className="maximize-btn"></span>
+      <div className="browser-window">
+        <div className="browser-header">
+          <div className="browser-buttons">
+            <span className="close-btn"></span>
+            <span className="minimize-btn"></span>
+            <span className="maximize-btn"></span>
+          </div>
         </div>
-      </div>
-    <div className="app" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '30vh' }}>
+        <div 
+          className="app" 
+          style={{ 
+            backgroundImage: `url(${backgroundImage})`, 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            backgroundRepeat: 'no-repeat', 
+            display: 'flex', 
+            flexDirection: 'column', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            minHeight: '30vh',
+            transition: 'background-image 0.5s ease-in-out' 
+          }}
+        >
       <h1 className={isRunning ? 'spinning-flower' : '' } style={{ fontSize: '2.5rem', fontWeight: 'bolder' }}>
         <div className="title-container">
           <span>Rice Timer ⏳</span>
