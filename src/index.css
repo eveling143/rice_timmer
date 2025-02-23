@@ -1,0 +1,131 @@
+body {
+  background-color: #f5e5fa;
+  font-family: 'Silkscreen', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-weight: bolder;
+}
+
+.app {
+  background: #74358d;
+  border: 3px dashed #fc53f3;
+  padding: 10px;
+  border-radius: 00px;
+  text-align: center;
+  box-shadow: 5px 5px 15px #ffb3c6;
+}
+
+h1 {
+  color: #0e0d0d;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bolder;
+}
+.timer {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.buttons button {
+  background: #f8b7e5;
+  border: 3px dotted #fc53f3;
+  padding: 10px 30px;
+  margin: 5px;
+
+  border-radius: 00px;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Silkscreen', cursive;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.buttons button:hover {
+  background: #ff85a2;
+  transform: scale(1.05);
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.kawaii-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+
+.spinning-flower img {
+  animation: spin 2s linear infinite;
+}
+.timer-container {
+  background-color: #ffe6f2;
+  border: 3px dashed #ff85a2;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 250px;
+}
+
+.center-image {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.browser-window {
+  width: 100%;
+  max-width: 800px;
+  background: #74358d;
+  border: 3px solid #fc53f3;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px #ffb3c6;
+}
+
+.browser-header {
+  background: #ffb3c6;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.browser-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.close-btn,
+.minimize-btn,
+.maximize-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.close-btn {
+  background: #eb56ff;
+}
+
+.minimize-btn {
+  background: #f7f0f6;
+}
+
+.maximize-btn {
+  background: #fad3fd;
+}
+
+
